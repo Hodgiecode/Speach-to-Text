@@ -34,11 +34,7 @@ def myfunc():
     resp = None
     with open('file_out.wav', 'rb') as f:
         resp = client.speech(f, None, {'Content-Type': 'audio/wav'})
-
-    url_= 'https://api.telegram.org/botTOKEN/sendMessage?chat_id='+arg2+'&text='+str(resp['text'])
-    requests.post(url_)
-    #os.remove("file_in.oga")
-    #os.remove("file_out.wav")
+        
     return url_
 
 if __name__ == '__main__':
